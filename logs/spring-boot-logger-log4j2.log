@@ -1,0 +1,72 @@
+2018-11-29 11:24:21,181 INFO o.s.b.StartupInfoLogger [main] Starting CustomerApplication on mcabezas-simtlixpc with PID 10485 (/home/mcabezas/workspace/claro/customer/target/classes started by mcabezas in /home/mcabezas/workspace/claro/customer)
+2018-11-29 11:24:21,186 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.0.6.RELEASE, Spring v5.0.10.RELEASE
+2018-11-29 11:24:21,187 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2018-11-29 11:24:21,223 INFO o.s.c.s.AbstractApplicationContext [main] Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3571b748: startup date [Thu Nov 29 11:24:21 ART 2018]; root of context hierarchy
+2018-11-29 11:24:22,073 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$399b7258] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-29 11:24:22,351 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 9000 (http)
+2018-11-29 11:24:22,359 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9000"]
+2018-11-29 11:24:22,364 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2018-11-29 11:24:22,365 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet Engine: Apache Tomcat/8.5.34
+2018-11-29 11:24:22,368 INFO o.a.j.l.DirectJDKLog [localhost-startStop-1] The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2018-11-29 11:24:22,421 INFO o.a.j.l.DirectJDKLog [localhost-startStop-1] Initializing Spring embedded WebApplicationContext
+2018-11-29 11:24:22,421 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [localhost-startStop-1] Root WebApplicationContext: initialization completed in 1201 ms
+2018-11-29 11:24:23,048 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-29 11:24:23,049 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'webMvcMetricsFilter' to: [/*]
+2018-11-29 11:24:23,049 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-29 11:24:23,050 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2018-11-29 11:24:23,050 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-29 11:24:23,051 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'springSecurityFilterChain' to: [/*]
+2018-11-29 11:24:23,051 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'httpTraceFilter' to: [/*]
+2018-11-29 11:24:23,051 INFO o.s.b.w.s.RegistrationBean [localhost-startStop-1] Filter keycloakAuthenticationProcessingFilter was not registered (disabled)
+2018-11-29 11:24:23,052 INFO o.s.b.w.s.RegistrationBean [localhost-startStop-1] Filter keycloakPreAuthActionsFilter was not registered (disabled)
+2018-11-29 11:24:23,052 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'keycloakSecurityContextRequestFilter' to: [/*]
+2018-11-29 11:24:23,052 INFO o.s.b.w.s.AbstractFilterRegistrationBean [localhost-startStop-1] Mapping filter: 'keycloakAuthenticatedActionsRequestFilter' to: [/*]
+2018-11-29 11:24:23,052 INFO o.s.b.w.s.ServletRegistrationBean [localhost-startStop-1] Servlet dispatcherServlet mapped to [/]
+2018-11-29 11:24:23,130 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2018-11-29 11:24:23,213 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2018-11-29 11:24:23,256 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Building JPA container EntityManagerFactory for persistence unit 'default'
+2018-11-29 11:24:23,268 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2018-11-29 11:24:23,312 INFO o.h.Version [main] HHH000412: Hibernate Core {5.2.17.Final}
+2018-11-29 11:24:23,313 INFO o.h.c.Environment [main] HHH000206: hibernate.properties not found
+2018-11-29 11:24:23,342 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-11-29 11:24:23,409 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2018-11-29 11:24:23,804 INFO o.h.t.s.i.SchemaCreatorImpl [main] HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@3f1a9a53'
+2018-11-29 11:24:23,807 INFO o.h.h.i.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2018-11-29 11:24:23,850 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2018-11-29 11:24:24,007 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6fa02932, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e180aaf, org.springframework.security.web.header.HeaderWriterFilter@6f7a2a5, org.springframework.security.web.csrf.CsrfFilter@5bf9ea6b, org.keycloak.adapters.springsecurity.filter.KeycloakPreAuthActionsFilter@2b27b9fc, org.springframework.security.web.authentication.logout.LogoutFilter@5927f904, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticationProcessingFilter@1af5519, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44592c39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c18a3ea, org.keycloak.adapters.springsecurity.filter.KeycloakSecurityContextRequestFilter@43ba5451, org.keycloak.adapters.springsecurity.filter.KeycloakAuthenticatedActionsFilter@186cd1b3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61608e1a, org.springframework.security.web.session.SessionManagementFilter@c3719e5, org.springframework.security.web.access.ExceptionTranslationFilter@6d963d70, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f1fb828]
+2018-11-29 11:24:24,059 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-29 11:24:24,194 INFO o.s.w.s.m.m.a.RequestMappingHandlerAdapter [main] Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3571b748: startup date [Thu Nov 29 11:24:21 ART 2018]; root of context hierarchy
+2018-11-29 11:24:24,214 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2018-11-29 11:24:24,243 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/api/customer/greeting],methods=[GET],produces=[application/json]}" onto public java.util.Map com.simtlix.consultafijapoc.customer.controller.CustomerController.getGreeting()
+2018-11-29 11:24:24,244 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/api/customer/list],methods=[GET],produces=[application/json]}" onto public java.util.List<com.simtlix.consultafijapoc.customer.model.Customer> com.simtlix.consultafijapoc.customer.controller.CustomerController.getAllCustomers() throws java.sql.SQLException
+2018-11-29 11:24:24,247 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-29 11:24:24,248 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-11-29 11:24:24,269 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-29 11:24:24,269 INFO o.s.w.s.h.AbstractUrlHandlerMapping [main] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-11-29 11:24:24,589 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 2 endpoint(s) beneath base path '/actuator'
+2018-11-29 11:24:24,597 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/actuator/health],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-11-29 11:24:24,597 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/actuator/info],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler.handle(javax.servlet.http.HttpServletRequest,java.util.Map<java.lang.String, java.lang.String>)
+2018-11-29 11:24:24,598 INFO o.s.w.s.h.AbstractHandlerMethodMapping$MappingRegistry [main] Mapped "{[/actuator],methods=[GET],produces=[application/vnd.spring-boot.actuator.v2+json || application/json]}" onto protected java.util.Map<java.lang.String, java.util.Map<java.lang.String, org.springframework.boot.actuate.endpoint.web.Link>> org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.links(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-11-29 11:24:24,663 INFO o.s.j.e.MBeanExporter [main] Registering beans for JMX exposure on startup
+2018-11-29 11:24:24,665 INFO o.s.j.e.MBeanExporter [main] Bean with name 'dataSource' has been autodetected for JMX exposure
+2018-11-29 11:24:24,671 INFO o.s.j.e.MBeanExporter [main] Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2018-11-29 11:24:24,684 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9000"]
+2018-11-29 11:24:24,689 INFO o.a.j.l.DirectJDKLog [main] Using a shared selector for servlet write/read
+2018-11-29 11:24:24,697 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 9000 (http) with context path ''
+2018-11-29 11:24:24,701 INFO o.s.b.StartupInfoLogger [main] Started CustomerApplication in 4.182 seconds (JVM running for 4.888)
+2018-11-29 11:24:49,829 INFO o.a.j.l.DirectJDKLog [http-nio-9000-exec-2] Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-11-29 11:24:49,829 INFO o.s.w.s.FrameworkServlet [http-nio-9000-exec-2] FrameworkServlet 'dispatcherServlet': initialization started
+2018-11-29 11:24:49,839 INFO o.s.w.s.FrameworkServlet [http-nio-9000-exec-2] FrameworkServlet 'dispatcherServlet': initialization completed in 10 ms
+2018-11-29 11:24:50,135 INFO c.s.c.c.c.CustomerController [http-nio-9000-exec-2] Method 'getGreting()' was called
+2018-11-29 11:25:01,155 INFO c.s.c.c.c.CustomerController [http-nio-9000-exec-3] Method 'getAllCustomers()' was called
+2018-11-29 11:25:01,159 INFO c.z.h.HikariDataSource [http-nio-9000-exec-3] HikariPool-2 - Starting...
+2018-11-29 11:25:01,240 INFO c.z.h.HikariDataSource [http-nio-9000-exec-3] HikariPool-2 - Start completed.
+2018-11-29 11:26:07,248 INFO o.s.c.s.AbstractApplicationContext [Thread-14] Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@3571b748: startup date [Thu Nov 29 11:24:21 ART 2018]; root of context hierarchy
+2018-11-29 11:26:07,252 INFO o.s.j.e.MBeanExporter [Thread-14] Unregistering JMX-exposed beans on shutdown
+2018-11-29 11:26:07,252 INFO o.s.j.s.MBeanRegistrationSupport [Thread-14] Unregistering JMX-exposed beans
+2018-11-29 11:26:07,254 INFO o.s.o.j.AbstractEntityManagerFactoryBean [Thread-14] Closing JPA EntityManagerFactory for persistence unit 'default'
+2018-11-29 11:26:07,254 INFO o.h.t.s.i.SchemaDropperImpl$DelayedDropActionImpl [Thread-14] HHH000477: Starting delayed drop of schema as part of SessionFactory shut-down'
+2018-11-29 11:26:07,262 INFO c.z.h.HikariDataSource [Thread-14] HikariPool-1 - Shutdown initiated...
+2018-11-29 11:26:07,263 INFO c.z.h.HikariDataSource [Thread-14] HikariPool-1 - Shutdown completed.
