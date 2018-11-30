@@ -5,18 +5,19 @@ import com.simtlix.consultafijapoc.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 @Service
 public class CustomerService {
-    @Autowired
-    private Customer customer;
 
     @Autowired
     private CustomerRepository customerRepository;
 
-    public List<Customer> getAllCustomers() throws SQLException {
+    public List<Customer> getAllCustomers(){
         return customerRepository.findAll();
+    }
+
+    public Customer findCustomerByDni(Integer dni) {
+        return customerRepository.findByDni(dni);
     }
 }

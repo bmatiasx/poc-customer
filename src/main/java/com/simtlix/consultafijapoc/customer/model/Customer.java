@@ -1,23 +1,19 @@
 package com.simtlix.consultafijapoc.customer.model;
 
-import org.springframework.stereotype.Component;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
 
-@Component
 @Entity
-@Table(name = "CUSTOMER")
-@NamedQuery(query = "select u from Customer u", name = "query_find_all_customers")
 public class Customer {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "dni")
     private Integer dni;
+
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "apellido")
     private String apellido;
 
     public void setDni(Integer dni) {
