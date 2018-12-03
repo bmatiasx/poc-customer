@@ -19,8 +19,7 @@ import org.springframework.security.web.authentication.session.SessionAuthentica
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter
-{
+public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
     @Bean
     public GrantedAuthoritiesMapper grantedAuthoritiesMapper() {
         SimpleAuthorityMapper mapper = new SimpleAuthorityMapper();
@@ -36,7 +35,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter
     }
 
     @Override
-    protected void configure(final AuthenticationManagerBuilder auth){
+    protected void configure(final AuthenticationManagerBuilder auth) {
         auth.authenticationProvider(keycloakAuthenticationProvider());
     }
 

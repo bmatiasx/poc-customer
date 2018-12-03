@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.Collections;
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class CustomerController {
     }
 
     @GetMapping(path = "/list", produces = "application/json")
-    public Iterable<Customer> getAllCustomers(){
+    public Iterable<Customer> getAllCustomers() {
         logger.info("Method 'getAllCustomers()' was called");
         return customerService.getAllCustomers();
     }
