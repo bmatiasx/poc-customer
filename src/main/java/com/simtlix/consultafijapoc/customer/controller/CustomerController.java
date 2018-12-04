@@ -36,8 +36,8 @@ public class CustomerController {
     }
 
     @GetMapping(path = "/{dni}")
-    public Customer getCustomerByDni(@PathVariable("dni") String dni) {
+    public Customer getCustomerByDni(@PathVariable(value = "dni", required = true) Integer dni) {
         logger.info("Method 'getCustomerByDni' was called for DNI: " + dni);
-        return customerService.findCustomerByDni(Integer.valueOf(dni));
+        return customerService.findCustomerByDni(dni);
     }
 }
