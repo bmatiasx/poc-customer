@@ -23,18 +23,6 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @GetMapping(path = "/greeting", produces = "application/json")
-    public Map getGreeting() {
-        logger.info("Method 'getGreting()' was called");
-        return Collections.singletonMap("greeting", "Hola desde el Customer webservice");
-    }
-
-    @GetMapping(path = "/list", produces = "application/json")
-    public Iterable<Customer> getAllCustomers() {
-        logger.info("Method 'getAllCustomers()' was called");
-        return customerService.getAllCustomers();
-    }
-
     @GetMapping(path = "/{dni}")
     public Customer getCustomerByDni(@PathVariable(value = "dni", required = true) Integer dni) {
         logger.info("Method 'getCustomerByDni' was called for DNI: " + dni);
