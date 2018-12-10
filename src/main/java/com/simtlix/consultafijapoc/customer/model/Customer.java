@@ -8,6 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "S_CLIENT_ACCOUNTS", schema = "EBILL")
 public class Customer {
+
     @Id
     @Column(name = "CLT_IDENTIFICATION_NUMBER")
     private Integer dni;

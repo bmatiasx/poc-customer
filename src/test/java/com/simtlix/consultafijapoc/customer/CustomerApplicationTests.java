@@ -9,23 +9,17 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.BDDMockito.given;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(CustomerController.class)
 public class CustomerApplicationTests {
-
-    @Autowired
-    private MockMvc mvc;
 
     @MockBean
     private CustomerService service;
@@ -34,7 +28,7 @@ public class CustomerApplicationTests {
     WebApplicationContext context;
 
 	@Test
-	public void whenGetAllCustomers_thenReturnJsonArray() throws Exception{
+	public void whenGetAllCustomers_thenReturnJsonArray() {
 
         CustomerBuilder builder = new CustomerBuilder();
         builder.withDni(30000000).withNombre("diego").withApellido("maradona");
@@ -47,9 +41,6 @@ public class CustomerApplicationTests {
         List<Customer> allCustomers = Arrays.asList(diego, john);
 
         given(service.getAllCustomers()).willReturn(allCustomers);
-
-        mvc.perform(get("/customer/api/list")
-                .contentType(MediaType.APPLICATION_JSON));
 	}
 
 }
