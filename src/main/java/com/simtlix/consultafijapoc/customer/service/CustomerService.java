@@ -1,5 +1,6 @@
 package com.simtlix.consultafijapoc.customer.service;
 
+import com.simtlix.consultafijapoc.customer.model.Account;
 import com.simtlix.consultafijapoc.customer.model.Customer;
 import com.simtlix.consultafijapoc.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,11 +14,16 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-    public List<Customer> getAllCustomers() {
-        return customerRepository.findAll();
-    }
+    @Autowired
+    private AccountService accountService;
 
     public Customer findCustomerByDni(Integer dni) {
-        return customerRepository.findByDni(dni);
+        Customer customer = customerRepository.findByDni(dni);
+
+        List<Account> accounts = accountService.findAccountsByCustomer(customer);
+
+        customer.setAccounts(accounts);
+
+        return customer;
     }
 }

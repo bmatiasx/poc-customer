@@ -35,12 +35,12 @@ public class CustomerApplicationTests {
         Customer diego = builder.build();
 
         CustomerBuilder builder1 = new CustomerBuilder();
-        builder1.withDni(30000000).withNombre("john").withApellido("carmac");
+        builder1.withDni(30000001).withNombre("john").withApellido("carmac");
         Customer john = builder1.build();
 
         List<Customer> allCustomers = Arrays.asList(diego, john);
 
-        given(service.getAllCustomers()).willReturn(allCustomers);
+        given(service.findCustomerByDni(30000000)).willReturn(diego);
 	}
 
 }

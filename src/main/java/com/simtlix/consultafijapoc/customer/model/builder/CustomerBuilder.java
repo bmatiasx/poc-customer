@@ -15,12 +15,12 @@ public class CustomerBuilder {
     }
 
     public CustomerBuilder withNombre(String nombre) {
-        customer.setNombre(nombre);
+        customer.setName(nombre);
         return this;
     }
 
     public CustomerBuilder withApellido(String apellido) {
-        customer.setApellido(apellido);
+        customer.setSurname(apellido);
         return this;
     }
 

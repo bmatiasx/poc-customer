@@ -4,9 +4,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+import java.util.List;
+import java.util.Set;
 
 @Entity
-@Table(name = "S_CLIENT_ACCOUNTS", schema = "EBILL")
+@Table(name = "VW_FIXED_SERVICES", schema = "EBILL")
 public class Customer {
 
     @Id
@@ -14,32 +17,43 @@ public class Customer {
     private Integer dni;
 
     @Column(name = "CLT_ID")
-    private Integer id;
+    private Integer clientId;
 
     @Column(name = "CLT_NAME")
-    private String nombre;
+    private String name;
 
     @Column(name = "CLT_SURNAME")
-    private String apellido;
+    private String surname;
+
+    @Transient
+    private List<Account> accounts;
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
 
     public void setDni(Integer dni) {
         this.dni = dni;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public Integer getDni() {
@@ -50,11 +64,11 @@ public class Customer {
         this.dni = dni;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getClientId() {
+        return clientId;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setClientId(Integer clientId) {
+        this.clientId = clientId;
     }
 }
