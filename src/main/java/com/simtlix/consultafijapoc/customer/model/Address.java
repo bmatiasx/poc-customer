@@ -1,6 +1,7 @@
 package com.simtlix.consultafijapoc.customer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,16 +13,18 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "VW_FIXED_SERVICES", schema = "EBILL")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class InstallationAddress {
 
-    @Id
+
     @Column(name = "ACC_ID")
     @JsonIgnore
     private Integer accountId;
 
-    @Column(name = "CLT_ID")
+    @Id
+    @Column(name = "CLU_CELLULAR_NUMBER")
     @JsonIgnore
-    private Integer clientId;
+    private Integer cellularNumber;
 
     @Column(name = "AAA_ADDRESS_STREET")
     private String street;
@@ -128,13 +131,5 @@ public class InstallationAddress {
 
     public void setAccountId(Integer accountId) {
         this.accountId = accountId;
-    }
-
-    public Integer getClientId() {
-        return clientId;
-    }
-
-    public void setClientId(Integer clientId) {
-        this.clientId = clientId;
     }
 }
