@@ -6,12 +6,12 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Objects;
 
 @Entity
 @Table(name = "VW_FIXED_SERVICES", schema = "EBILL")
-public class SubscribedService {
+public class Subscription {
 
-    @Id
     @Column(name = "ACC_ID")
     @JsonIgnore
     private Integer accountId;
@@ -25,6 +25,7 @@ public class SubscribedService {
     @Column(name = "RATE_PLAN")
     private String plan;
 
+    @Id
     @Column(name = "CLU_CELLULAR_NUMBER")
     private Integer cellularNumber;
 
@@ -68,4 +69,22 @@ public class SubscribedService {
         this.plan = plan;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (!(o instanceof Subscription)) {
+            return false;
+        }
+
+        Subscription subscription = (Subscription) o;
+        return Objects.equals(accountId, subscription.accountId) &&
+                Objects.equals(serviceTypeId, subscription.serviceTypeId) &&
+                Objects.equals(serviceTypeDescription, subscription.serviceTypeDescription) &&
+                Objects.equals(plan, subscription.plan);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(accountId, serviceTypeId, serviceTypeDescription, plan);
+    }
 }

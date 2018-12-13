@@ -1,11 +1,11 @@
 package com.simtlix.consultafijapoc.customer.repository;
 
-import com.simtlix.consultafijapoc.customer.model.InstallationAddress;
+import com.simtlix.consultafijapoc.customer.model.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;
 
-public interface InstallationAddressRepository extends JpaRepository<InstallationAddress, Integer> {
+public interface AddressRepository extends JpaRepository<Address, Integer> {
 
-    Set<InstallationAddress> findInstallationAddressesByAccountId(Integer accountId);
+    Set<Address> findInstallationAddressesByAccountId(Integer accountId);
 }

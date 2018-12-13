@@ -22,7 +22,7 @@ public class Account {
     private Integer clientId;
 
     @Transient
-    private List<InstallationAddress> installationAddresses;
+    private List<Address> addresses;
 
     public Integer getClientId() {
         return clientId;
@@ -40,11 +40,11 @@ public class Account {
         this.accountId = accountId;
     }
 
-    public List<InstallationAddress> getInstallationAddresses() {
-        return installationAddresses;
+    public List<Address> getAddresses() {
+        return addresses;
     }
 
-    public void setInstallationAddresses(List<InstallationAddress> installationAddresses) {
-        this.installationAddresses = installationAddresses;
+    public void setAddresses(List<Address> addresses) {
+        this.addresses = addresses;
     }
 }

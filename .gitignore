@@ -1,5 +1,6 @@
 target/
 logs/
+logs/spring-boot-logger-log4j2.log
 !.mvn/wrapper/maven-wrapper.jar
 
 ### STS ###

@@ -2,7 +2,7 @@ package com.simtlix.consultafijapoc.customer.service;
 
 import com.simtlix.consultafijapoc.customer.model.Account;
 import com.simtlix.consultafijapoc.customer.model.Customer;
-import com.simtlix.consultafijapoc.customer.model.InstallationAddress;
+import com.simtlix.consultafijapoc.customer.model.Address;
 import com.simtlix.consultafijapoc.customer.repository.AccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,18 +18,19 @@ public class AccountService {
     private AccountRepository accountRepository;
 
     @Autowired
-    private InstallationAddressService installationAddressService;
+    private AddressService addressService;
 
     public List<Account> findAccountsByCustomer(Customer customer) {
-        List<InstallationAddress> installationAddresses;
+        List<Address> addresses;
         Set<Account> accounts = accountRepository.findByClientId(customer.getClientId());
         List<Account> customerAccounts = new ArrayList<>();
 
         for (Account account : accounts) {
             Account customerAccount = new Account();
-            installationAddresses = installationAddressService.findInstallationAddressesByAccountId(account.getAccountId());
+            addresses = addressService.findInstallationAddressesByAccountId(account.getAccountId());
+
             customerAccount.setAccountId(account.getAccountId());
-            customerAccount.setInstallationAddresses(installationAddresses);
+            customerAccount.setAddresses(addresses);
             customerAccounts.add(customerAccount);
         }
 

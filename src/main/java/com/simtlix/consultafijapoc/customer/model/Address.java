@@ -9,12 +9,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import java.util.List;
-import java.util.UUID;
+import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "VW_FIXED_SERVICES", schema = "EBILL")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class InstallationAddress {
+public class Address {
 
 
     @Column(name = "ACC_ID")
@@ -51,7 +52,7 @@ public class InstallationAddress {
     private String department;
 
     @Transient
-    private List<SubscribedService> subscribedServices;
+    private Set<Subscription> subscriptions;
 
     public String getStreet() {
         return street;
@@ -117,12 +118,12 @@ public class InstallationAddress {
         this.department = department;
     }
 
-    public List<SubscribedService> getSubscribedServices() {
-        return subscribedServices;
+    public Set<Subscription> getSubscriptions() {
+        return subscriptions;
     }
 
-    public void setSubscribedServices(List<SubscribedService> subscribedServices) {
-        this.subscribedServices = subscribedServices;
+    public void setSubscriptions(Set<Subscription> subscriptions) {
+        this.subscriptions = subscriptions;
     }
 
     public Integer getAccountId() {
@@ -132,4 +133,29 @@ public class InstallationAddress {
     public void setAccountId(Integer accountId) {
         this.accountId = accountId;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this) return true;
+        if (!(o instanceof Address)) {
+            return false;
+        }
+
+        Address address = (Address) o;
+        return Objects.equals(accountId, address.accountId) &&
+                Objects.equals(street, address.street) &&
+                Objects.equals(number, address.number) &&
+                Objects.equals(tower, address.tower) &&
+                Objects.equals(floor, address.floor) &&
+                Objects.equals(flat, address.flat) &&
+                Objects.equals(withinStreets, address.withinStreets) &&
+                Objects.equals(city, address.city) &&
+                Objects.equals(department, address.department);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(accountId, street, number, tower, floor, flat, withinStreets, city, department);
+    }
+
 }

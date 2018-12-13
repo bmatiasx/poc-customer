@@ -6,13 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
-public class SubscribedServiceService {
+public class SubscriptionService {
     @Autowired
     private SubscriptionRepository subscriptionRepository;
 
-    public List<Subscription> findSubscribedServicesByAccountId(Integer accountId) {
+    public Set<Subscription> findSubscribedServicesByAccountId(Integer accountId) {
 
         return subscriptionRepository.findSubscribedServicesByAccountId(accountId);
     }
