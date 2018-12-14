@@ -1,6 +1,7 @@
 package com.simtlix.consultafijapoc.customer.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,6 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "VW_FIXED_SERVICES", schema = "EBILL")
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Subscription {
 
     @Column(name = "ACC_ID")
