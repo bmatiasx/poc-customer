@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;
 
-public interface AddressRepository extends JpaRepository<Address, Integer> {
+public interface AddressRepository extends JpaRepository<Address, Long> {
 
-    Set<Address> findInstallationAddressesByAccountId(Integer accountId);
+    Set<Address> findAllByAccountId(Long accountId);
 }

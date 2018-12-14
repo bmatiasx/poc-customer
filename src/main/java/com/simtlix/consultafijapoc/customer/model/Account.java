@@ -17,7 +17,7 @@ public class Account {
 
     @Id
     @Column(name = "ACC_ID")
-    private Integer accountId;
+    private Long accountId;
 
     @JsonIgnore
     @Column(name = "CLT_ID")
@@ -34,11 +34,11 @@ public class Account {
         this.clientId = clientId;
     }
 
-    public Integer getAccountId() {
+    public Long getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(Long accountId) {
         this.accountId = accountId;
     }
 

@@ -20,7 +20,7 @@ public class CustomerService {
     public Customer findCustomerByDni(Integer dni) {
         Customer customer = customerRepository.findByDni(dni);
 
-        List<Account> accounts = accountService.findAccountsByCustomer(customer);
+        List<Account> accounts = accountService.findAllByCustomer(customer);
 
         customer.setAccounts(accounts);
 

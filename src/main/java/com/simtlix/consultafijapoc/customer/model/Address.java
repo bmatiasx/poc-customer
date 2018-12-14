@@ -8,8 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 @Entity
@@ -20,7 +22,7 @@ public class Address {
 
     @Column(name = "ACC_ID")
     @JsonIgnore
-    private Integer accountId;
+    private Long accountId;
 
     @Id
     @Column(name = "CLU_CELLULAR_NUMBER")
@@ -33,23 +35,31 @@ public class Address {
     @Column(name = "AAA_ADDRESS_NUMBER")
     private String number;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_TOWER")
     private String tower;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_FLOOR")
     private String floor;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_FLAT")
     private String flat;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_WITHIN_STREETS")
     private String withinStreets;
 
     @Column(name = "AAA_ADDRESS_CITY")
     private String city;
 
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_DEPARTMENT")
     private String department;
+
+    @Column(name = "AAA_CPA")
+    private String cp;
 
     @Transient
     private Set<Subscription> subscriptions;
@@ -126,12 +136,20 @@ public class Address {
         this.subscriptions = subscriptions;
     }
 
-    public Integer getAccountId() {
+    public Long getAccountId() {
         return accountId;
     }
 
-    public void setAccountId(Integer accountId) {
+    public void setAccountId(Long accountId) {
         this.accountId = accountId;
+    }
+
+    public String getCp() {
+        return cp;
+    }
+
+    public void setCp(String cp) {
+        this.cp = cp;
     }
 
     @Override
