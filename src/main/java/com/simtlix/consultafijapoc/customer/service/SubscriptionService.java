@@ -5,6 +5,7 @@ import com.simtlix.consultafijapoc.customer.repository.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -12,7 +13,7 @@ public class SubscriptionService {
     @Autowired
     private SubscriptionRepository subscriptionRepository;
 
-    public Set<Subscription> findAllByAccountId(Long accountId) {
+    public List<Subscription> findAllByAccountId(Long accountId) {
 
         return subscriptionRepository.findAllByAccountId(accountId);
     }

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Service
 public class AddressService {
@@ -21,8 +22,8 @@ public class AddressService {
     private SubscriptionService subscriptionService;
 
     public List<Address> findAllByAccountId(Long accountId) {
-        Set<Subscription> subscriptions;
-        Set<Address> addresses = addressRepository.findAllByAccountId(accountId);
+        List<Subscription> subscriptions;
+        Set<Address> addresses = addressRepository.findAllByAccountId(accountId).stream().collect(Collectors.toSet());
         List<Address> customerAdresses = new ArrayList<>();
 
         for (Address address : addresses) {
