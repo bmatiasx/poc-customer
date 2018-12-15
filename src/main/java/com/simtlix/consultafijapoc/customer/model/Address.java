@@ -27,7 +27,7 @@ public class Address {
     @Id
     @Column(name = "CLU_CELLULAR_NUMBER")
     @JsonIgnore
-    private Integer cellularNumber;
+    private Long cellularNumber;
 
     @Column(name = "AAA_ADDRESS_STREET")
     private String street;

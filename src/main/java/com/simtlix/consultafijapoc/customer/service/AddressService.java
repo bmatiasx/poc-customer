@@ -82,7 +82,7 @@ public class AddressService {
         }
 
         if (subscription.getCellularNumber() == null) {
-            customerSubscription.setCellularNumber(0);
+            customerSubscription.setCellularNumber(0L);
         } else {
             customerSubscription.setCellularNumber(subscription.getCellularNumber());
         }

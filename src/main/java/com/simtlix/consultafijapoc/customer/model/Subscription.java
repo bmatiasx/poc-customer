@@ -29,7 +29,7 @@ public class Subscription {
 
     @Id
     @Column(name = "CLU_CELLULAR_NUMBER")
-    private Integer cellularNumber;
+    private Long cellularNumber;
 
     @JsonIgnore
     @Column(name = "AAA_ADDRESS_STREET")
@@ -99,11 +99,11 @@ public class Subscription {
         this.accountId = accountId;
     }
 
-    public Integer getCellularNumber() {
+    public Long getCellularNumber() {
         return cellularNumber;
     }
 
-    public void setCellularNumber(Integer cellularNumber) {
+    public void setCellularNumber(Long cellularNumber) {
         this.cellularNumber = cellularNumber;
     }
 
