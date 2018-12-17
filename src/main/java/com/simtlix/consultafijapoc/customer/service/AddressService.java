@@ -88,7 +88,7 @@ public class AddressService {
         }
 
         if (subscription.getNumber() == null) {
-            customerSubscription.setNumber("");
+            customerSubscription.setNumber(0);
         } else {
             customerSubscription.setNumber(subscription.getNumber());
         }
@@ -142,7 +142,7 @@ public class AddressService {
         customerAddress.setAccountId(address.getAccountId());
 
         if (address.getNumber() == null) {
-            customerAddress.setNumber("");
+            customerAddress.setNumber(0);
         } else {
             customerAddress.setNumber(address.getNumber());
         }

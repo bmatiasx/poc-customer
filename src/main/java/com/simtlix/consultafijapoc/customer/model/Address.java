@@ -33,7 +33,7 @@ public class Address {
     private String street;
 
     @Column(name = "AAA_ADDRESS_NUMBER")
-    private String number;
+    private Integer number;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @Column(name = "AAA_ADDRESS_TOWER")
@@ -64,6 +64,14 @@ public class Address {
     @Transient
     private Set<Subscription> subscriptions;
 
+    public Long getCellularNumber() {
+        return cellularNumber;
+    }
+
+    public void setCellularNumber(Long cellularNumber) {
+        this.cellularNumber = cellularNumber;
+    }
+
     public String getStreet() {
         return street;
     }
@@ -72,11 +80,11 @@ public class Address {
         this.street = street;
     }
 
-    public String getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 

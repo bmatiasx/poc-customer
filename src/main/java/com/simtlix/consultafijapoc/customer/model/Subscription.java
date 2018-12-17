@@ -37,7 +37,7 @@ public class Subscription {
 
     @JsonIgnore
     @Column(name = "AAA_ADDRESS_NUMBER")
-    private String number;
+    private Integer number;
 
     @JsonIgnore
     @Column(name = "AAA_ADDRESS_TOWER")
@@ -123,11 +123,11 @@ public class Subscription {
         this.street = street;
     }
 
-    public String getNumber() {
+    public Integer getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
