@@ -1,4 +1,4 @@
-package com.simtlix.consultafijapoc.customer;
+package com.andromedcodealab.consultafijapoc.customer;
 
 import org.keycloak.adapters.KeycloakConfigResolver;
 import org.keycloak.adapters.springboot.KeycloakSpringBootConfigResolver;

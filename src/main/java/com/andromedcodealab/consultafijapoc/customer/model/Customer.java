@@ -1,4 +1,4 @@
-package com.simtlix.consultafijapoc.customer.model;
+package com.andromedcodealab.consultafijapoc.customer.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 

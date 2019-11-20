@@ -1,12 +1,11 @@
-package com.simtlix.consultafijapoc.customer.service;
+package com.andromedcodealab.consultafijapoc.customer.service;
 
-import com.simtlix.consultafijapoc.customer.model.Subscription;
-import com.simtlix.consultafijapoc.customer.repository.SubscriptionRepository;
+import com.andromedcodealab.consultafijapoc.customer.model.Subscription;
+import com.andromedcodealab.consultafijapoc.customer.repository.SubscriptionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 @Service
 public class SubscriptionService {

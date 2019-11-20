@@ -1,6 +1,6 @@
-package com.simtlix.consultafijapoc.customer.repository;
+package com.andromedcodealab.consultafijapoc.customer.repository;
 
-import com.simtlix.consultafijapoc.customer.model.Account;
+import com.andromedcodealab.consultafijapoc.customer.model.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;

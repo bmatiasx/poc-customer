@@ -1,9 +1,9 @@
-package com.simtlix.consultafijapoc.customer;
+package com.andromedcodealab.consultafijapoc.customer;
 
-import com.simtlix.consultafijapoc.customer.controller.CustomerController;
-import com.simtlix.consultafijapoc.customer.model.Customer;
-import com.simtlix.consultafijapoc.customer.model.builder.CustomerBuilder;
-import com.simtlix.consultafijapoc.customer.service.CustomerService;
+import com.andromedcodealab.consultafijapoc.customer.controller.CustomerController;
+import com.andromedcodealab.consultafijapoc.customer.model.Customer;
+import com.andromedcodealab.consultafijapoc.customer.model.builder.CustomerBuilder;
+import com.andromedcodealab.consultafijapoc.customer.service.CustomerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

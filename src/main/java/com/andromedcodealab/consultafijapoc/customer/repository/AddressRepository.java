@@ -1,10 +1,9 @@
-package com.simtlix.consultafijapoc.customer.repository;
+package com.andromedcodealab.consultafijapoc.customer.repository;
 
-import com.simtlix.consultafijapoc.customer.model.Address;
+import com.andromedcodealab.consultafijapoc.customer.model.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
-import java.util.Set;
 
 public interface AddressRepository extends JpaRepository<Address, Long> {
 

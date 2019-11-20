@@ -1,6 +1,6 @@
-package com.simtlix.consultafijapoc.customer.model;
+package com.andromedcodealab.consultafijapoc.customer.model;
 
-import com.simtlix.consultafijapoc.customer.model.builder.AddressBuilder;
+import com.andromedcodealab.consultafijapoc.customer.model.builder.AddressBuilder;
 import org.junit.Before;
 import org.junit.Test;
 

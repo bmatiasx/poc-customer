@@ -1,6 +1,6 @@
-package com.simtlix.consultafijapoc.customer.model.builder;
+package com.andromedcodealab.consultafijapoc.customer.model.builder;
 
-import com.simtlix.consultafijapoc.customer.model.Customer;
+import com.andromedcodealab.consultafijapoc.customer.model.Customer;
 
 public class CustomerBuilder {
 

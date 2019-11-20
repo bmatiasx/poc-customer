@@ -1,8 +1,8 @@
-package com.simtlix.consultafijapoc.customer.service;
+package com.andromedcodealab.consultafijapoc.customer.service;
 
-import com.simtlix.consultafijapoc.customer.model.Account;
-import com.simtlix.consultafijapoc.customer.model.Customer;
-import com.simtlix.consultafijapoc.customer.repository.CustomerRepository;
+import com.andromedcodealab.consultafijapoc.customer.model.Account;
+import com.andromedcodealab.consultafijapoc.customer.model.Customer;
+import com.andromedcodealab.consultafijapoc.customer.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
